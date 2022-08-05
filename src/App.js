@@ -302,16 +302,6 @@ class App extends React.Component {
         <br />
         <div>
         
-        <p className='mt-20'>Use HPDex to trade HPB</p>   
-        
-          <Iframe
-            title="Trade HPB on HPDEX"
-            src="https://app.hpdex.org/#/swap"
-            height="660px"
-            width="100%"
-            style={divStyle}
-            id="myId"
-            />
       </div>
         
         
