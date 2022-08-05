@@ -1,13 +1,11 @@
 import logo from './logo.png';
-import call from './call.png';
 import './App.css';
 import web3 from './web3';
 import myContract from './myContract';
 import React from "react";
 import ReactModal from 'react-modal';
-import Iframe from 'react-iframe';
 
-const delay = t => new Promise(s => setTimeout(s, t * 1000));
+// const delay = t => new Promise(s => setTimeout(s, t * 1000));
 
 const divStyle = {
               'border': '0',
@@ -25,7 +23,6 @@ class App extends React.Component {
     name: '',
     getMyChips: '',
     getBalance: '',
-    balance: '',
     stakeValue: 0,
     stakeIndex: 0,
     withdrawValue: 0,
@@ -149,7 +146,6 @@ class App extends React.Component {
 
     this.setState({ message: 'Waiting on transaction success...'});
 
-    const gasPrice = await web3.eth.getGasPrice();
     const accounts = await web3.eth.getAccounts();
  //   const child = Child(this.props.address);
     await myContract.methods.buyChips(this.state.ref).send({
