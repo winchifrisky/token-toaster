@@ -3,19 +3,6 @@ import './App.css';
 import web3 from './web3';
 import myContract from './myContract';
 import React from "react";
-import ReactModal from 'react-modal';
-
-// const delay = t => new Promise(s => setTimeout(s, t * 1000));
-
-const divStyle = {
-              'border': '0',
-            'margin': '0 auto',
-            'display': 'block',
-            'border-radius': '10px',
-            'max-width': '600px',
-            'min-width': '300px'
-};
-
 
 class App extends React.Component {
   state = {
