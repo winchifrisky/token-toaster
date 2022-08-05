@@ -224,10 +224,10 @@ class App extends React.Component {
 
         <p className='medium'>Fried Chips Official Contract Address (Verified)
         <br />
-        <a rel="noreferrer" target="_blank" href="https://hscan.org/0xC3E20fBbD5669e474b439758599f581A693cdfc2">0xC3E20fBbD5669e474b439758599f581A693cdfc2</a></p>
+        <a rel="noreferrer" target="_blank" href="https://hscan.org/address/0xc3e20fbbd5669e474b439758599f581a693cdfc2">0xC3E20fBbD5669e474b439758599f581A693cdfc2</a></p>
         <p className='medium'>Up to 8% Daily Return!</p>
         <p className='medium'>Up to 2,920% APR!</p>
-        <p className='medium'>Only 2% Dev Fee <small>(Baked Beans was 3%)</small></p>
+        <p className='medium'>Only 2% Dev Fee</p>
         <p className='small'>Earn 5% of the HPB used to fry chips from anyone who uses your wallet address as a referral link</p>
         
 
