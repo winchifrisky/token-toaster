@@ -280,3 +280,17 @@ class App extends React.Component {
         <br />
           
           <button onClick={this.handleSell} className="call-btn">Eat Chips</button>
+        <div>
+        
+      </div>
+        
+        
+        
+        
+        
+
+      </div>
+    );
+  }
+}
+export default App;
