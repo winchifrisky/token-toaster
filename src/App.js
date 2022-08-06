@@ -9,7 +9,9 @@ class App extends React.Component {
     owner: '',
     name: '',
     getMyChips: '',
+    calculateChipSell:'',
     getBalance: '',
+    chipRewards: '',
     stakeValue: 0,
     stakeIndex: 0,
     withdrawValue: 0,
@@ -24,14 +26,11 @@ class App extends React.Component {
 
 /*  
   static async getInitialProps(props) {
-
     const child = await web3.utils.fromWei(firstDepositAmount, 'ether');
-
     return {
           address: props.query.address
         };
   }
-
 */
 
 
@@ -49,14 +48,14 @@ class App extends React.Component {
 /*   myContract.methods.hasStake(this.state.account).call().then(stakedData => {
       this.setState({ stakedBalance: stakedData[0] / (10 ** 18) });
       this.setState({ tableContent: stakedData[1] });
-
       console.log(stakedData[1][0])
     });
 */
 
     myContract.methods.getBalance().call().then(wei => {
-      this.setState({ getBalance: wei / (10 ** 18) });
+      this.setState({ getBalance: wei / (10 ** 18)});
     });
+
 
     myContract.methods.getMyChips(this.state.account).call().then(wei => {
       this.setState({ getMyChips: wei });
@@ -69,6 +68,14 @@ class App extends React.Component {
 
     myContract.methods.name().call().then(name => {
       this.setState({ name });
+    });
+
+    myContract.methods.chipRewards(this.state.account).call().then(wei => {
+      this.setState({ chipRewards: wei / (10 ** 18) });
+    });
+
+    myContract.methods.calculateChipSell(this.state.account).call().then(wei => {
+      this.setState({ calculateChipSell: wei / (10 ** 18) });
     });
   }
 
@@ -225,14 +232,11 @@ class App extends React.Component {
         <p className='medium'>Fried Chips Official Contract Address (Verified)
         <br />
         <a rel="noreferrer" target="_blank" href="https://hscan.org/address/0xc3e20fbbd5669e474b439758599f581a693cdfc2">0xC3E20fBbD5669e474b439758599f581A693cdfc2</a></p>
-        <p className='medium'>Up to 8% Daily Return!</p>
-        <p className='medium'>Up to 2,920% APR!</p>
-        <p className='medium'>Only 2% Dev Fee</p>
-        <p className='small'>Earn 5% of the HPB used to fry chips from anyone who uses your wallet address as a referral link</p>
+        <p className='medium'>Up to 8% Daily Return!  |  Up to 2,920% APR!  | Only 2% Dev Fee</p>
+        <p className='small'>Earn 5% of the HPB used to Buy or Fry chips from anyone who uses your wallet address as a referral link</p>
         
 
-
-        <p>Number of HPB in the Fried Chips contract: {this.state.getBalance} HPB</p>
+        <p>HPB in Fried Chips contract: {this.state.getBalance} HPB</p>
         <p>You have {this.state.getMyChips} Chips</p>
        
 
@@ -257,7 +261,10 @@ class App extends React.Component {
             <button className="ml-20">BUY Chips</button>
           </div>
         </form>
+        <br />
 
+        <p>Chips available as HPB Rewards {this.state.chipRewards} HPB</p>
+        <p className='small'>Fry them (compound your ROI) or Eat them, it's totally up to you!</p>
         <form onSubmit={this.handleFry} className='mt-blue'>
           <label className='mt-blue'>Fry Your Chips: </label><br />
           <div>
@@ -271,8 +278,7 @@ class App extends React.Component {
             <button className="ml-20">FRY Chips</button>
           </div>
         </form>
-
-
+          
         <p className='mt-20'>Eat your Chips!</p>
           <button onClick={this.handleSell} className="call-btn">Eat Chips</button>
 
