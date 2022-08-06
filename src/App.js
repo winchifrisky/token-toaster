@@ -232,7 +232,7 @@ class App extends React.Component {
         <p className='medium'>Fried Chips Official Contract Address (Verified)
         <br />
         <a rel="noreferrer" target="_blank" href="https://hscan.org/address/0xc3e20fbbd5669e474b439758599f581a693cdfc2">0xC3E20fBbD5669e474b439758599f581A693cdfc2</a></p>
-        <p className='medium'>Up to 8% Daily Return!  |  Up to 2,920% APR!  | Only 2% Dev Fee</p>
+        <p>Up to 8% Daily Return!  |  Up to 2,920% APR!  | Only 2% Dev Fee</p>
         <p className='small'>Earn 5% of the HPB used to Buy or Fry chips from anyone who uses your wallet address as a referral link</p>
         
 
@@ -241,9 +241,8 @@ class App extends React.Component {
        
 
         <form onSubmit={this.handleBuy} className='mt-20'>
-          <label className='mt-20'>Buy Chips: </label><br />
-          <div>
-            <label className="ml-20">Amount to spend in HPB: </label>
+           <div>
+            <label className="ml-20">Buy Your Chips (Amount to spend in HPB): </label>
             <input
               type="number"
               min={0}
@@ -278,32 +277,6 @@ class App extends React.Component {
             <button className="ml-20">FRY Chips</button>
           </div>
         </form>
+        <br />
           
-        <p className='mt-20'>Eat your Chips!</p>
           <button onClick={this.handleSell} className="call-btn">Eat Chips</button>
-
-
-
-
-
-
-        <br />
-
-
-        {}
-
-        <br />
-        <div>
-        
-      </div>
-        
-        
-        
-        
-        
-
-      </div>
-    );
-  }
-}
-export default App;
