@@ -1,5 +1,5 @@
 {
-  "name": "dapp",
+  "name": "token-toaster",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,13 +8,13 @@
     "@testing-library/user-event": "^12.1.10",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-iframe": "1.8.0",
     "react-modal": "^3.14.3",
-    "react-scripts": "4.0.3",
+    "react-scripts": "^2.1.3",
     "semantic-ui-react": "^2.0.4",
     "web-vitals": "^1.0.1",
     "web3": "^1.6.0",
-    "web3-eth": "^1.6.0",
-    "react-iframe": "1.8.0"
+    "web3-eth": "^1.6.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -39,5 +39,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "The Baked Beans fork for High Performance Blockchain",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/winchifrisky/token-toaster.git"
+  },
+  "author": "winchifrisky",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/winchifrisky/token-toaster/issues"
+  },
+  "homepage": "https://github.com/winchifrisky/token-toaster#readme"
 }
